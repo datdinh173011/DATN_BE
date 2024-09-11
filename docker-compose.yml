@@ -16,7 +16,7 @@ services:
   web:
     build: .
     restart: always
-    command: "bash build/start_backend_dev.sh"
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/app
     env_file:
